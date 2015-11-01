@@ -1,0 +1,61 @@
+<h1>Contacts</h1>
+
+<table>
+    <tr ng-repeat="contact in contacts" >
+        <td>{{ contact.id }}</td>
+        <td>&nbsp;</td>
+        <td>{{ contact.name }}</td>
+        <td>&nbsp;</td>
+        <td>{{ contact.email }}</td>
+        <td>&nbsp;</td>
+        <td>
+            <button ng-click="edit('{{contact.uuid}}')">
+                edit
+            </button>
+        </td>
+        <td>&nbsp;</td>
+        <td>
+            <button ng-click="delete('{{contact.uuid}}')">
+                remove
+            </button>
+        </td>
+    </tr>
+</table>
+
+<br>
+<br>
+
+<button ng-click="newContact()">
+    New contact
+</button>
+
+
+<div class="editContact" ng-show="showEditContact">
+    <h2>Edit contact</h2>
+    <input type="text" name="userName" ng-model="selectedcontact.name" required>
+    <input type="text" name="email" ng-model="selectedcontact.email" required>
+    <br><br>
+    <button ng-click="save()">
+        save
+    </button>
+    <button ng-click="cancel()">
+        cancel
+    </button>
+</div>
+
+<br>
+<br>
+
+<div  class="editContact" ng-show="showNewContact">
+    <h2>New contact</h2>
+    <input type="text" name="userName" ng-model="newcontact.name" required>
+    <input type="text" name="email" ng-model="newcontact.email" required>
+    <br><br>
+    <button ng-click="add()">
+        toevoegen
+    </button>
+    <button ng-click="cancel()">
+        cancel
+    </button>
+</div>
+

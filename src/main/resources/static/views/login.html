@@ -1,0 +1,42 @@
+<h1>Login</h1>
+
+
+
+
+
+<form ng-submit="login(user)" >
+<table>
+    <tr>
+        <td>
+            Username:
+        </td>
+        <td>
+            <input ng-model='user.username'>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Password:
+        </td>
+        <td>
+            <input type=password ng-model='user.password'>
+        </td>
+    </tr>
+</table>
+
+<p ng-show="loginfailed" class="error">
+    Authentication failed
+</p>
+
+
+<br>
+
+<input type="submit" value="Login"/>
+<br>
+<br>
+<small>Note: initial username/password is john/pw</small>
+
+</form>
+
+
+
