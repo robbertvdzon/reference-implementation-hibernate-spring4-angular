@@ -20,12 +20,10 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Qualifier("userDetailsService")
     UserDetailsService userDetailsService;
 
-
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService);
     }
-
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -36,7 +34,5 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and()
                 .formLogin()
         ;
-
     }
-
 }

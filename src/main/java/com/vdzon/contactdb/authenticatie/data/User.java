@@ -3,11 +3,9 @@ package com.vdzon.contactdb.authenticatie.data;
 import com.vdzon.contactdb.contacts.data.Contact;
 
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.util.List;
 
-@XmlRootElement
 @Entity
 @Table(name = "users")
 public class User implements Serializable {
@@ -16,7 +14,6 @@ public class User implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String uuid;
-
     private String username;
     private String passwd;
     private String permissions;

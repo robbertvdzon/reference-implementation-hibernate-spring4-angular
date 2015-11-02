@@ -1,9 +1,7 @@
 package com.vdzon.contactdb.contacts.data;
 
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement
 @Entity
 @Table(name = "contacts")
 public class Contact {
@@ -56,22 +54,4 @@ public class Contact {
         this.email = email;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-
-        Contact person = (Contact) o;
-
-        return id.equals(person.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return id.hashCode();
-    }
 }

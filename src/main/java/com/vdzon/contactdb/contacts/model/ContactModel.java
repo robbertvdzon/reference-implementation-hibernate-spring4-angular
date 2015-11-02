@@ -13,7 +13,7 @@ public class ContactModel {
 
     // the fromString is needed to convert json to object. This is needed for using this object as a PathParam in REST
     public static ContactModel fromString(String jsonRepresentation) throws IOException {
-        return mapper.readValue(jsonRepresentation, ContactModel.class );
+        return mapper.readValue(jsonRepresentation, ContactModel.class);
     }
 
     public String getUuid() {

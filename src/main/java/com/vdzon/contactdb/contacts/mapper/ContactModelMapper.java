@@ -9,12 +9,12 @@ import java.util.List;
 public class ContactModelMapper {
 
 
-    public static void mergeModel(final ContactModel model, Contact contact){
+    public static void mergeModel(final ContactModel model, Contact contact) {
         contact.setEmail(model.getEmail());
         contact.setName(model.getName());
     }
 
-    public static ContactModel toModel(final Contact contact){
+    public static ContactModel toModel(final Contact contact) {
         ContactModel contactModel = new ContactModel();
         contactModel.setUuid(contact.getUuid().toString());
         contactModel.setEmail(contact.getEmail());
@@ -22,9 +22,9 @@ public class ContactModelMapper {
         return contactModel;
     }
 
-    public static List<ContactModel> toModel(final List<Contact> contacts){
+    public static List<ContactModel> toModel(final List<Contact> contacts) {
         List<ContactModel> contactModels = new ArrayList<ContactModel>();
-        for (Contact contact:contacts){
+        for (Contact contact : contacts) {
             contactModels.add(toModel(contact));
         }
         return contactModels;
