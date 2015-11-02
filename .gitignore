@@ -75,3 +75,7 @@ node_modules
 src/main/webapp/lib/bower
 temp
 build
+
+# h2 database files
+*.mv.db
+*.trace.db
